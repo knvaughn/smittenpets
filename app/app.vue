@@ -1,51 +1,74 @@
 <script setup>
-useHead({
-  meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-  ],
-  link: [
-    { rel: 'icon', href: '/favicon.ico' }
-  ],
-  htmlAttrs: {
-    lang: 'en'
-  }
-})
+const title = "S'Mitten Pets of Metro Detroit";
+const description =
+  "A boutique grooming retreat for dogs and cats. Professional, low-stress care for your furry family members in Metro Detroit.";
+const siteUrl = "https://smittenpets.com";
 
-const title = 'Nuxt Starter Template'
-const description = 'A production-ready starter template powered by Nuxt UI. Build beautiful, accessible, and performant applications in minutes, not hours.'
+const items = computed(() => [
+  {
+    label: "Services",
+    to: "/services",
+  },
+  {
+    label: "Gallery",
+    to: "/gallery",
+  },
+  {
+    label: "About",
+    to: "/about",
+  },
+  {
+    label: "Contact",
+    to: "/contact",
+  },
+]);
+
+useHead({
+  meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
+  link: [{ rel: "icon", href: "/favicon.ico" }],
+  htmlAttrs: {
+    lang: "en",
+  },
+});
 
 useSeoMeta({
   title,
   description,
   ogTitle: title,
   ogDescription: description,
-  ogImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
-  twitterImage: 'https://ui.nuxt.com/assets/templates/nuxt/starter-light.png',
-  twitterCard: 'summary_large_image'
-})
+  ogUrl: siteUrl,
+  ogType: "website",
+  ogImage: "/og-image.png",
+  twitterCard: "summary_large_image",
+  twitterTitle: title,
+  twitterDescription: description,
+});
 </script>
 
 <template>
   <UApp>
-    <UHeader>
+    <UHeader
+      :toggle="{
+        size: 'xl',
+      }"
+    >
       <template #left>
         <NuxtLink to="/">
           <AppLogo class="w-auto h-6 shrink-0" />
         </NuxtLink>
-
-        <TemplateMenu />
       </template>
 
-      <template #right>
-        <UColorModeButton />
+      <UNavigationMenu :items="items" />
 
-        <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
-          target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
-          color="neutral"
-          variant="ghost"
+      <template #right>
+        <UButton to="/booking" label="Book Now" />
+      </template>
+
+      <template #body>
+        <UNavigationMenu
+          :items="items"
+          orientation="vertical"
+          class="-mx-2.5"
         />
       </template>
     </UHeader>
@@ -54,21 +77,21 @@ useSeoMeta({
       <NuxtPage />
     </UMain>
 
-    <USeparator icon="i-simple-icons-nuxtdotjs" />
+    <USeparator icon="i-fa7-solid-paw" />
 
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          Built with Nuxt UI • © {{ new Date().getFullYear() }}
+          S'Mitten Pets of Metro Detroit ©
+          {{ new Date().getFullYear() }}
         </p>
       </template>
 
       <template #right>
         <UButton
-          to="https://github.com/nuxt-ui-templates/starter"
+          to="https://github.com/knvaughn"
           target="_blank"
-          icon="i-simple-icons-github"
-          aria-label="GitHub"
+          label="Site made with &hearts; by Kristin Vaughn"
           color="neutral"
           variant="ghost"
         />
