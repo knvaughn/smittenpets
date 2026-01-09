@@ -16,11 +16,13 @@
     "@nuxt/image": "2.0.0",
     "@nuxt/ui": "^4.3.0",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "nodemailer": "^7.0.12",
     "nuxt": "^4.2.2"
   },
   "devDependencies": {
     "@iconify-json/fa7-solid": "^1.2.3",
     "@nuxt/eslint": "^1.12.1",
+    "@types/nodemailer": "^7.0.4",
     "eslint": "^9.39.2",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.1"
