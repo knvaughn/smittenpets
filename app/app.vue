@@ -6,6 +6,10 @@ const siteUrl = "https://smittenpets.com";
 
 const items = computed(() => [
   {
+    label: "Home",
+    to: "/",
+  },
+  {
     label: "Services",
     to: "/services",
   },
@@ -61,7 +65,7 @@ useSeoMeta({
       <UNavigationMenu :items="items" />
 
       <template #right>
-        <UButton to="/booking" label="Book Now" />
+        <UButton to="/booking" label="Book Now" color="secondary" />
       </template>
 
       <template #body>

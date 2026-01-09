@@ -2,19 +2,23 @@
   <div>
     <UPageHero
       orientation="horizontal"
+      :ui="{
+        root: 'bg-cyan-100',
+      }"
       :links="[
         {
           label: 'Book Now',
           to: '/booking',
           trailingIcon: 'i-lucide-arrow-right',
           size: 'xl',
+          color: 'secondary',
         },
         {
           label: 'View Services',
           to: '/services',
           trailingIcon: 'i-lucide-arrow-right',
           size: 'xl',
-          color: 'neutral',
+          color: 'primary',
           variant: 'subtle',
         },
       ]"
@@ -57,6 +61,9 @@
       id="features"
       title="A Suite of Boutique Pet Grooming & Spa Services"
       description="From the tip of the tail to the top of the ears, we provide high-standard dog grooming and cat grooming services in a low-stress environment. Every pet is treated with the patience and attention they deserve."
+      :ui="{
+        container: 'pb-6 lg:pb-0',
+      }"
       :features="[
         {
           icon: 'i-lucide-dog',
@@ -100,20 +107,17 @@
           label: 'View All Services & Pricing',
           to: '/services',
           size: 'xl',
+          color: 'secondary',
         },
       ]"
     />
 
-    <UPageSection
-      id="about"
-      title="The S’Mitten Difference"
-      description="Professional care with a personal touch. We believe grooming should be a highlight of your pet's month, not a source of stress."
-    >
+    <UPageSection>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div class="space-y-8">
           <div class="space-y-4">
             <h3 class="text-3xl font-bold">Why Metro Detroit trusts us</h3>
-            <p class="text-lg text-gray-600 dark:text-gray-400">
+            <p class="text-lg text-neutral-600 dark:text-neutral-400">
               As a professionally trained groomer with deep roots in Michigan, I
               focus on one-on-one appointments. Your pet gets my undivided
               attention from start to finish in a calm, kennel-free environment.
@@ -121,7 +125,7 @@
           </div>
 
           <div
-            class="flex items-start gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800/50 border border-gray-100 dark:border-gray-800"
+            class="flex items-start gap-4 p-4 rounded-xl bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-100 dark:border-neutral-800"
           >
             <UIcon
               name="i-lucide-map-pin"
@@ -129,9 +133,11 @@
             />
             <div>
               <h4 class="font-bold text-lg">Our Location</h4>
-              <p class="text-gray-600 dark:text-gray-400">Metro Detroit Area</p>
+              <p class="text-neutral-600 dark:text-neutral-400">
+                Metro Detroit Area
+              </p>
               <p class="text-sm text-primary font-medium mt-1 italic">
-                Boutique salon coming soon!
+                Boutique coming soon!
               </p>
             </div>
           </div>
@@ -161,8 +167,8 @@
           <div class="space-y-2">
             <div
               v-for="schedule in [
-                { day: 'Sunday', hours: 'Closed', color: 'text-gray-400' },
-                { day: 'Monday', hours: 'Closed', color: 'text-gray-400' },
+                { day: 'Sunday', hours: 'Closed', color: 'text-neutral-400' },
+                { day: 'Monday', hours: 'Closed', color: 'text-neutral-400' },
                 { day: 'Tuesday', hours: '9 AM - 5 PM' },
                 { day: 'Wednesday', hours: '9 AM - 5 PM' },
                 { day: 'Thursday', hours: '9 AM - 5 PM' },
@@ -170,7 +176,7 @@
                 { day: 'Saturday', hours: '9 AM - 2 PM' },
               ]"
               :key="schedule.day"
-              class="flex justify-between border-b border-gray-100 dark:border-gray-800 pb-1 last:border-0"
+              class="flex justify-between border-b border-neutral-100 dark:border-neutral-800 pb-1 last:border-0"
               :class="schedule.color"
             >
               <span class="font-semibold">{{ schedule.day }}</span>
@@ -185,6 +191,7 @@
               block
               size="xl"
               icon="i-lucide-calendar"
+              color="secondary"
             />
           </template>
         </UCard>
