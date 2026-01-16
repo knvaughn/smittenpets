@@ -25,17 +25,10 @@
     >
       <template #title>
         <div class="space-y-2">
-          <div class="flex items-center gap-2 text-primary font-medium mb-4">
-            <UIcon name="i-lucide-scissors" class="w-6 h-6" />
-            <span class="uppercase tracking-widest text-xs">
-              In-Home Dog & Cat Grooming in Dearborn, Michigan
-            </span>
-          </div>
-
-          <h1 class="text-5xl/8 lg:text-7xl/12 font-bold">
+          <h1 class="text-6xl/8 lg:text-8xl/12 font-bold">
             <span class="font-display">Smitten Pets</span> <br />
             <span
-              class="font-light uppercase text-2xl lg:text-4xl tracking-widest"
+              class="font-light uppercase text-xl lg:text-4xl tracking-[11px] lg:tracking-[15px]"
             >
               Grooming Co.
             </span>
@@ -44,8 +37,8 @@
       </template>
 
       <template #description>
-        Smitten Pets Grooming Co. offers boutique grooming services for dogs and
-        cats in the comfort of your own home.
+        Specialist Dog & Cat Grooming in Dearborn, Michigan. Offering boutique
+        grooming services from the comfort of your own home.
       </template>
 
       <div>
@@ -135,12 +128,12 @@
               class="h-8 w-8 text-primary shrink-0"
             />
             <div>
-              <h4 class="font-bold text-lg">Location</h4>
+              <h4 class="font-bold text-lg">Service Area</h4>
               <p class="text-neutral-600 dark:text-neutral-400">
-                Dearborn, Michigan and surrounding areas
+                Dearborn, Allen Park, Southgate, Taylor, Brownstown, & Woodhaven
               </p>
               <p class="text-sm text-primary font-medium mt-1 italic">
-                Coming soon!
+                Extended travel available upon request
               </p>
             </div>
           </div>
@@ -172,10 +165,10 @@
               v-for="schedule in [
                 { day: 'Sunday', hours: 'Closed', color: 'text-neutral-400' },
                 { day: 'Monday', hours: 'Closed', color: 'text-neutral-400' },
-                { day: 'Tuesday', hours: '9 AM - 5 PM' },
-                { day: 'Wednesday', hours: '9 AM - 5 PM' },
-                { day: 'Thursday', hours: '9 AM - 5 PM' },
-                { day: 'Friday', hours: '9 AM - 5 PM' },
+                { day: 'Tuesday', hours: '9 AM - 7 PM' },
+                { day: 'Wednesday', hours: '9 AM - 7 PM' },
+                { day: 'Thursday', hours: '9 AM - 7 PM' },
+                { day: 'Friday', hours: '9 AM - 7 PM' },
                 { day: 'Saturday', hours: '9 AM - 2 PM' },
               ]"
               :key="schedule.day"

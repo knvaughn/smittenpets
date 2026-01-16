@@ -72,7 +72,7 @@ useSeoMeta({
       <UNavigationMenu :items="items" />
 
       <template #right>
-        <UButton to="/booking" label="Book Now" color="primary" />
+        <UButton to="/booking" label="Book Now" color="primary" size="lg" />
       </template>
 
       <template #body>
@@ -88,20 +88,20 @@ useSeoMeta({
 
     <UFooter>
       <template #left>
+        <UButton
+          to="https://github.com/knvaughn"
+          target="_blank"
+          label="Site made by Kristin Vaughn"
+          color="neutral"
+          variant="ghost"
+        />
+      </template>
+
+      <template #right>
         <p class="text-sm text-muted">
           Smitten Pets Grooming Co. ©
           {{ new Date().getFullYear() }}
         </p>
-      </template>
-
-      <template #right>
-        <UButton
-          to="https://github.com/knvaughn"
-          target="_blank"
-          label="Site made with &hearts; by Kristin Vaughn"
-          color="neutral"
-          variant="ghost"
-        />
       </template>
     </UFooter>
   </UApp>
