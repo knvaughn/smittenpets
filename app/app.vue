@@ -69,14 +69,28 @@ useSeoMeta({
         </NuxtLink>
       </template>
 
-      <UNavigationMenu :items="items" />
+      <UNavigationMenu
+        :items="items"
+        :ui="{
+          link: 'text-sm uppercase tracking-[3px] font-normal',
+          linkLabel: 'text-sm px-3',
+        }"
+      />
 
       <template #right>
         <UButton to="/booking" label="Book Now" color="primary" size="lg" />
       </template>
 
       <template #body>
-        <UNavigationMenu :items="items" orientation="vertical" class="mt-14" />
+        <UNavigationMenu
+          :items="items"
+          orientation="vertical"
+          class="mt-14"
+          :ui="{
+            link: 'text-lg uppercase tracking-[5px] font-normal',
+            linkLabel: 'text-lg py-2',
+          }"
+        />
       </template>
     </UHeader>
 
