@@ -1,7 +1,8 @@
 <script setup>
-const title = "S'Mitten Pets of Metro Detroit";
+const title =
+  "Smitten Pets Grooming Co. | In-Home Dog & Cat Grooming in Dearborn, MI";
 const description =
-  "A boutique grooming retreat for dogs and cats. Professional, low-stress care for your furry family members in Metro Detroit.";
+  "In-home grooming services for dogs and cats. Professional, low-stress care for your furry family members in Dearborn and surrounding areas.";
 const siteUrl = "https://smittenpets.com";
 
 const items = computed(() => [
@@ -52,28 +53,30 @@ useSeoMeta({
 <template>
   <UApp>
     <UHeader
+      mode="slideover"
       :toggle="{
         size: 'xl',
       }"
+      :ui="{
+        root: 'relative w-full border-none bg-transparent backdrop-blur-none',
+        header: 'border-0',
+        container: 'pl-0',
+      }"
     >
       <template #left>
-        <NuxtLink to="/">
-          <AppLogo class="w-auto h-6 shrink-0" />
+        <NuxtLink to="/" class="relative top-4 rounded-full">
+          <AppLogo class="shrink-0 rounded-full" />
         </NuxtLink>
       </template>
 
       <UNavigationMenu :items="items" />
 
       <template #right>
-        <UButton to="/booking" label="Book Now" color="secondary" />
+        <UButton to="/booking" label="Book Now" color="primary" />
       </template>
 
       <template #body>
-        <UNavigationMenu
-          :items="items"
-          orientation="vertical"
-          class="-mx-2.5"
-        />
+        <UNavigationMenu :items="items" orientation="vertical" class="mt-14" />
       </template>
     </UHeader>
 
@@ -86,7 +89,7 @@ useSeoMeta({
     <UFooter>
       <template #left>
         <p class="text-sm text-muted">
-          S'Mitten Pets of Metro Detroit ©
+          Smitten Pets Grooming Co. ©
           {{ new Date().getFullYear() }}
         </p>
       </template>

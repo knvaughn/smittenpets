@@ -19,13 +19,6 @@ async function onNotify() {
 
 <template>
   <UContainer class="py-8 sm:py-32 flex flex-col items-center text-center">
-    <div class="relative">
-      <UIcon
-        name="i-lucide-clock-9"
-        class="relative w-20 h-20 text-primary-500 animate-pulse"
-      />
-    </div>
-
     <UPageHeader>
       <template #title>
         <div class="text-center w-full">
@@ -43,8 +36,8 @@ async function onNotify() {
             class="text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed"
           >
             We're currently perfecting our boutique experience for the pets of
-            Metro Detroit. This page is getting a little extra grooming and will
-            be ready soon!
+            Dearborn. This page is getting a little extra grooming and will be
+            ready soon!
           </p>
         </div>
       </template>
@@ -72,7 +65,7 @@ async function onNotify() {
         />
         <UButton
           type="submit"
-          color="secondary"
+          color="primary"
           label="Notify Me"
           class="cursor-pointer"
           :loading="status === 'loading'"

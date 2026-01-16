@@ -1,3 +1,3 @@
-# S'Mitten Pets of Metro Detroit
+# Smitten Pets Grooming Co.
 
 Website and booking portal

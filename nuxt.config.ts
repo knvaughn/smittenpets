@@ -13,7 +13,10 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       Fredoka: {
-        wght: [400, 600, 700],
+        wght: [300, 400, 600, 700],
+      },
+      "Dancing Script": {
+        wght: [400, 500, 600, 700],
       },
     },
   },

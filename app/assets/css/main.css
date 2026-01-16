@@ -3,6 +3,31 @@
 
 @theme static {
   --font-sans: "Fredoka", sans-serif;
+  --font-display: "Dancing Script", sans-serif;
+
+  --color-primary-50: oklch(0.968 0.013 11.69);
+  --color-primary-100: oklch(0.943 0.023 7.78);
+  --color-primary-200: oklch(0.877 0.053 9.44);
+  --color-primary-300: oklch(0.821 0.082 9.44);
+  --color-primary-400: oklch(0.765 0.115 9.13);
+  --color-primary-500: oklch(0.707 0.154 9.73);
+  --color-primary-600: oklch(0.603 0.203 10.76);
+  --color-primary-700: oklch(0.486 0.163 10.41);
+  --color-primary-800: oklch(0.37 0.124 11.13);
+  --color-primary-900: oklch(0.261 0.088 10.35);
+  --color-primary-950: oklch(0.196 0.067 10.03);
+
+  --color-secondary-50: oklch(0.99 0.007 97.21);
+  --color-secondary-100: oklch(0.99 0.007 97.21);
+  --color-secondary-200: oklch(0.982 0.014 92.92);
+  --color-secondary-300: oklch(0.965 0.031 96.83);
+  --color-secondary-400: oklch(0.956 0.04 96.21);
+  --color-secondary-500: oklch(0.946 0.052 97.64);
+  --color-secondary-600: oklch(0.784 0.069 99.3);
+  --color-secondary-700: oklch(0.62 0.054 98.93);
+  --color-secondary-800: oklch(0.465 0.04 98.52);
+  --color-secondary-900: oklch(0.3 0.026 98.15);
+  --color-secondary-950: oklch(0.217 0.019 98.15);
 }
 
 h1,
@@ -12,4 +37,9 @@ h4,
 h4,
 h6 {
   font-weight: 600;
+}
+
+h2,
+h3 {
+  font-family: var(--font-display);
 }

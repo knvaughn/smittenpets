@@ -17,12 +17,12 @@ export default defineEventHandler(async (event) => {
 
   try {
     await transporter.sendMail({
-      from: `"S'Mitten Pets" <${process.env.GMAIL_USER}>`,
+      from: `"Smitten Pets" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       subject: "New Coming Soon Lead! 🐾",
       html: `
         <div style="font-family: sans-serif; padding: 20px; border: 1px solid #0ABAB5;">
-          <h2>New Signup for S'Mitten Pets</h2>
+          <h2>New Signup for Smitten Pets</h2>
           <p>A potential client just signed up for updates:</p>
           <p><strong>Email:</strong> ${email}</p>
         </div>

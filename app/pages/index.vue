@@ -3,7 +3,7 @@
     <UPageHero
       orientation="horizontal"
       :ui="{
-        root: 'bg-cyan-100',
+        root: 'bg-secondary',
       }"
       :links="[
         {
@@ -11,7 +11,7 @@
           to: '/booking',
           trailingIcon: 'i-lucide-arrow-right',
           size: 'xl',
-          color: 'secondary',
+          color: 'primary',
         },
         {
           label: 'View Services',
@@ -19,7 +19,7 @@
           trailingIcon: 'i-lucide-arrow-right',
           size: 'xl',
           color: 'primary',
-          variant: 'subtle',
+          variant: 'outline',
         },
       ]"
     >
@@ -28,27 +28,30 @@
           <div class="flex items-center gap-2 text-primary font-medium mb-4">
             <UIcon name="i-lucide-scissors" class="w-6 h-6" />
             <span class="uppercase tracking-widest text-xs">
-              Professional Dog & Cat Grooming • Metro Detroit
+              In-Home Dog & Cat Grooming in Dearborn, Michigan
             </span>
           </div>
 
-          <h1 class="text-5xl lg:text-7xl font-bold">
-            Purely <span class="text-primary">S&rsquo;Mitten</span> with your
-            pet.
+          <h1 class="text-5xl/8 lg:text-7xl/12 font-bold">
+            <span class="font-display">Smitten Pets</span> <br />
+            <span
+              class="font-light uppercase text-2xl lg:text-4xl tracking-widest"
+            >
+              Grooming Co.
+            </span>
           </h1>
         </div>
       </template>
 
       <template #description>
-        S'Mitten Pets of Metro Detroit offers boutique grooming services for
-        cats and dogs. From one-on-one dog styling to low-stress cat baths and
-        expert dematting.
+        Smitten Pets Grooming Co. offers boutique grooming services for dogs and
+        cats in the comfort of your own home.
       </template>
 
       <div>
         <NuxtImg
-          src="/hero-yellow.png"
-          alt="Happy dog in a field of yellow flowers"
+          src="/hero-pink.png"
+          alt="Happy dog after grooming"
           width="600"
           height="600"
           class="w-full rounded-full shadow-xl border-4 border-primary-50 dark:border-primary-900/20"
@@ -59,35 +62,35 @@
 
     <UPageSection
       id="features"
-      title="A Suite of Boutique Pet Grooming & Spa Services"
-      description="From the tip of the tail to the top of the ears, we provide high-standard dog grooming and cat grooming services in a low-stress environment. Every pet is treated with the patience and attention they deserve."
+      title="A Suite of In-Home Grooming Services"
+      description="Every pet is treated with the patience and attention they deserve."
       :ui="{
         container: 'pb-6 lg:pb-0',
       }"
       :features="[
         {
           icon: 'i-lucide-dog',
-          title: 'Full Dog Grooming',
+          title: 'Full Dog Groom',
           description:
-            'Personalized styling tailored to your dog\'s breed, coat type, and personality. This service includes a bath, blow dry, brush out, precision haircut, sanitary trim, paw pad trim, nail clipping, ear cleaning, and anal gland expression (upon request).',
+            'Includes bath, brush, blow dry, haircut, sanitary & paw pad trim, ear cleaning, & nail trim.',
         },
         {
           icon: 'i-lucide-cat',
-          title: 'Full Cat Grooming',
+          title: 'Full Cat Groom',
           description:
-            'Expert, gentle handling for our feline friends. This service includes a waterless or wet bath (depending on comfort), blow dry, thorough comb-out, nail trim, ear cleaning, and your choice of a lion cut, plush trim, or sanitary shave.',
+            'Includes a waterless or wet bath (depending on comfort), brush, blow dry, haircut / sanitary trim, ear cleaning, & nail trim.',
         },
         {
           icon: 'i-lucide-wind',
           title: 'Dematting & Coat Recovery',
           description:
-            'A specialized, patient service focused on the pain-free removal of mats and tangles. We prioritize the health of the skin and the comfort of the pet, using premium conditioners to restore the coat whenever possible.',
+            'A specialized, patient service focused on the pain-free removal of mats and tangles. ',
         },
         {
           icon: 'i-lucide-bath',
-          title: 'Bath & Brush',
+          title: 'Bath, Brush, & Blow Dry',
           description:
-            'Premium shampoos and conditioners, thorough blow-drying, and a deep brush-out to remove shedding hair and restore coat shine.',
+            'Premium shampoos and conditioners, blow dry, and a deep brush out to remove shedding hair and restore coat shine.',
         },
         {
           icon: 'i-lucide-paw-print',
@@ -107,7 +110,7 @@
           label: 'View All Services & Pricing',
           to: '/services',
           size: 'xl',
-          color: 'secondary',
+          color: 'primary',
         },
       ]"
     />
@@ -116,11 +119,11 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div class="space-y-8">
           <div class="space-y-4">
-            <h3 class="text-3xl font-bold">Why Metro Detroit trusts us</h3>
+            <h3 class="text-3xl font-bold">The Smitten Difference</h3>
             <p class="text-lg text-neutral-600 dark:text-neutral-400">
               As a professionally trained groomer with deep roots in Michigan, I
               focus on one-on-one appointments. Your pet gets my undivided
-              attention from start to finish in a calm, kennel-free environment.
+              attention from start to finish in the comfort of your home.
             </p>
           </div>
 
@@ -132,12 +135,12 @@
               class="h-8 w-8 text-primary shrink-0"
             />
             <div>
-              <h4 class="font-bold text-lg">Our Location</h4>
+              <h4 class="font-bold text-lg">Location</h4>
               <p class="text-neutral-600 dark:text-neutral-400">
-                Metro Detroit Area
+                Dearborn, Michigan and surrounding areas
               </p>
               <p class="text-sm text-primary font-medium mt-1 italic">
-                Boutique coming soon!
+                Coming soon!
               </p>
             </div>
           </div>
@@ -160,7 +163,7 @@
           <template #header>
             <div class="flex items-center justify-center gap-2">
               <UIcon name="i-lucide-clock" class="h-5 w-5 text-primary" />
-              <h4 class="font-bold text-xl text-center">Salon Hours</h4>
+              <h4 class="font-bold text-xl text-center">Available Hours</h4>
             </div>
           </template>
 
@@ -187,11 +190,11 @@
           <template #footer>
             <UButton
               to="/booking"
-              label="Request an Appointment"
+              label="Book an Appointment"
               block
               size="xl"
               icon="i-lucide-calendar"
-              color="secondary"
+              color="primary"
             />
           </template>
         </UCard>
