@@ -203,7 +203,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url("yellow-print.png") repeat;
+  background: url("/yellow-print.png") repeat;
   opacity: 0.2;
 }
 </style>
