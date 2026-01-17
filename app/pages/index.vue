@@ -5,7 +5,8 @@
       orientation="horizontal"
       :ui="{
         root: 'bg-secondary ',
-        container: 'pt-50 sm:pt-60 lg:pt-40',
+        container: 'text-center lg:text-left pt-50 sm:pt-60 lg:pt-40',
+        links: 'flex justify-center lg:justify-start',
       }"
       :links="[
         {
@@ -56,36 +57,54 @@
       }"
       :features="[
         {
+          ui: {
+            description: 'text-base',
+          },
           icon: 'i-lucide-dog',
           title: 'Full Dog Groom',
           description:
             'Includes bath, brush, blow dry, haircut, sanitary & paw pad trim, ear cleaning, & nail trim.',
         },
         {
+          ui: {
+            description: 'text-base',
+          },
           icon: 'i-lucide-cat',
           title: 'Full Cat Groom',
           description:
             'Includes a waterless or wet bath (depending on comfort), brush, blow dry, haircut or sanitary trim, ear cleaning, & nail trim.',
         },
         {
+          ui: {
+            description: 'text-base',
+          },
           icon: 'i-lucide-wind',
           title: 'Dematting & Coat Recovery',
           description:
             'A specialized, patient service focused on the pain-free removal of mats and tangles. ',
         },
         {
+          ui: {
+            description: 'text-base',
+          },
           icon: 'i-lucide-bath',
           title: 'Bath, Brush, & Blow Dry',
           description:
             'Premium shampoos and conditioners, blow dry, and a deep brush out to remove shedding hair and restore coat shine.',
         },
         {
+          ui: {
+            description: 'text-base',
+          },
           icon: 'i-lucide-paw-print',
           title: 'Nail Trim',
           description:
             'Safe clipping and filing to keep paws healthy and prevent scratching.',
         },
         {
+          ui: {
+            description: 'text-base',
+          },
           icon: 'i-fa7-solid-tooth',
           title: 'Teeth Brushing',
           description:
@@ -105,7 +124,7 @@
     <UPageSection>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div class="space-y-8">
-          <div class="space-y-4">
+          <div class="space-y-4 text-center md:text-left">
             <h3 class="text-3xl font-bold">Grooming with Care</h3>
             <p class="text-lg text-neutral-600 dark:text-neutral-400">
               As a professionally trained groomer and pet lover with deep roots
