@@ -18,7 +18,7 @@ async function onNotify() {
 </script>
 
 <template>
-  <UContainer class="py-16 sm:py-32 flex flex-col items-center text-center">
+  <UContainer class="py-30 sm:py-45 flex flex-col items-center text-center">
     <UPageHeader>
       <template #title>
         <div class="text-center w-full">

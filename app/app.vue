@@ -29,7 +29,13 @@ const items = computed(() => [
 ]);
 
 useHead({
-  meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
+  meta: [
+    {
+      name: "viewport",
+      content:
+        "width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0",
+    },
+  ],
   link: [{ rel: "icon", href: "/favicon.ico" }],
   htmlAttrs: {
     lang: "en",
@@ -58,13 +64,12 @@ useSeoMeta({
         size: 'xl',
       }"
       :ui="{
-        root: 'relative w-full border-none bg-transparent backdrop-blur-none',
+        root: 'absolute w-full border-none bg-transparent backdrop-blur-none',
         header: 'border-0',
-        container: 'pl-0',
       }"
     >
       <template #left>
-        <NuxtLink to="/" class="relative top-4 rounded-full">
+        <NuxtLink to="/" class="relative top-10 sm:top-14 rounded-full">
           <AppLogo class="shrink-0 rounded-full" />
         </NuxtLink>
       </template>

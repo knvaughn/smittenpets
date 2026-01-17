@@ -1,9 +1,11 @@
 <template>
   <div>
     <UPageHero
+      id="hero"
       orientation="horizontal"
       :ui="{
-        root: 'bg-secondary',
+        root: 'bg-secondary ',
+        container: 'pt-50 sm:pt-60 lg:pt-40',
       }"
       :links="[
         {
@@ -12,14 +14,6 @@
           trailingIcon: 'i-lucide-arrow-right',
           size: 'xl',
           color: 'primary',
-        },
-        {
-          label: 'View Services',
-          to: '/services',
-          trailingIcon: 'i-lucide-arrow-right',
-          size: 'xl',
-          color: 'primary',
-          variant: 'outline',
         },
       ]"
     >
@@ -37,7 +31,7 @@
       </template>
 
       <template #description>
-        Specialist Dog & Cat Grooming in Dearborn, Michigan. Offering boutique
+        In-Home Dog & Cat Grooming in Dearborn, Michigan. Offering boutique
         grooming services from the comfort of your own home.
       </template>
 
@@ -47,7 +41,7 @@
           alt="Happy dog after grooming"
           width="600"
           height="600"
-          class="w-full rounded-full shadow-xl border-4 border-primary-50 dark:border-primary-900/20"
+          class="w-full rounded-full border-4 border-primary-50 dark:border-primary-900/20"
           sizes="100vw sm:50vw md:600px"
         />
       </div>
@@ -55,8 +49,8 @@
 
     <UPageSection
       id="features"
-      title="A Suite of In-Home Grooming Services"
-      description="Every pet is treated with the patience and attention they deserve."
+      title="A complete range of in-home grooming services for dogs and cats"
+      description="With Smitten Pets Grooming Co, every pet is treated with the patience and attention they deserve. The goal is to make grooming a positive experience for both you and your fur baby, and reduce stress by eliminating the need for travel, kenneling, and waiting time. Professional grooming is brought right to your doorstep!"
       :ui="{
         container: 'pb-6 lg:pb-0',
       }"
@@ -71,7 +65,7 @@
           icon: 'i-lucide-cat',
           title: 'Full Cat Groom',
           description:
-            'Includes a waterless or wet bath (depending on comfort), brush, blow dry, haircut / sanitary trim, ear cleaning, & nail trim.',
+            'Includes a waterless or wet bath (depending on comfort), brush, blow dry, haircut or sanitary trim, ear cleaning, & nail trim.',
         },
         {
           icon: 'i-lucide-wind',
@@ -112,11 +106,15 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
         <div class="space-y-8">
           <div class="space-y-4">
-            <h3 class="text-3xl font-bold">The Smitten Difference</h3>
+            <h3 class="text-3xl font-bold">Grooming with Care</h3>
             <p class="text-lg text-neutral-600 dark:text-neutral-400">
-              As a professionally trained groomer with deep roots in Michigan, I
-              focus on one-on-one appointments. Your pet gets my undivided
-              attention from start to finish in the comfort of your home.
+              As a professionally trained groomer and pet lover with deep roots
+              in Michigan, I prioritize your pet's comfort and your peace of
+              mind. Every appointment is tailored to your specific needs. I
+              listen to what you want, communicate any concerns upfront, and
+              document your pet's health background and grooming history. Your
+              pet receives my undivided attention in the familiar environment of
+              your home, eliminating traumatic salon visits.
             </p>
           </div>
 
@@ -195,3 +193,17 @@
     </UPageSection>
   </div>
 </template>
+
+<style scoped>
+#hero {
+  position: relative;
+}
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url("yellow-print.png") repeat;
+  opacity: 0.2;
+}
+</style>
